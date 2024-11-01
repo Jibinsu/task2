@@ -15,10 +15,10 @@ pipeline {
                         -e SONAR_LOGIN=\${SONAT_TOKEN} \
                         -v \${WORKSPACE}:/usr/src \
                         sonarsource/sonar-scanner-cli \
-                        Dsonar.projectKey=myapp \
-                        Dsonar.sources=. \
-                        Dsonar.host.url=\${SONARQUBE_HOST} \
-                        Dsonar.login=\${SONAR_TOKEN} \
+                        -Dsonar.projectKey=myapp \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=\${SONARQUBE_HOST} \
+                        -Dsonar.login=\${SONAR_TOKEN} \
                         """
                     }
                 }
